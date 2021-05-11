@@ -6,12 +6,13 @@
 // Put your answer below -------------------------
 
 
-
-
-
-
-
-
+function myFunction(string, num1){
+    var array = [];
+    for(i = 0; i < num1; i++)
+    array.push(string);
+    return array;
+}
+myFunction('hey', 6);
 
 
 // -----------------------------------------------
@@ -23,14 +24,14 @@
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
-
-
+function reverseArray(array) {
+  var output = []
+  for(let i = array.length - 1; i >= 0; i--){
+    output.push(array[i]);
+    }
+    return output;
+}
+reverseArray([1,2,3,4])
 
 // -----------------------------------------------
 
@@ -40,13 +41,21 @@
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
-
+function removeFalsy(array){
+    if(array.indexOf('') > -1){
+    array.splice(array.indexOf(''), 1);
+  } if (array.indexOf(0) > -1){
+    array.splice(array.indexOf(0), 1);
+  } if (array.indexOf(false) > -1){
+    array.splice(array.indexOf(false), 1);
+  } if (array.indexOf(null) > -1){
+    array.splice(array.indexOf(null), 1);
+  } if (array.indexOf(undefined) > -1){
+    array.splice(array.indexOf(undefined), 1);
+  }
+    return array;
+}
+removeFalsy(['1', 1, 0, '', 'hey',]);
 
 
 // -----------------------------------------------
@@ -59,14 +68,12 @@
 
 // Put your answer below -------------------------
 
+function nestedArray(array) {
+  var object = Object.fromEntries(array);
+  return object;
+}
 
-
-
-
-
-
-
-
+nestedArray([['name', 'Charlie'], ['color', 'brown'], ['age', 10]]);
 
 // -----------------------------------------------
 
@@ -77,13 +84,12 @@
 
 // Put your answer below -------------------------
 
+function removeDuplicate(array){
+  array = [...new Set(array)];
+  return array;
 
-
-
-
-
-
-
+}
+removeDuplicate([1,2,3,4,5,4,3]);
 
 
 // -----------------------------------------------
@@ -98,13 +104,21 @@
 
 // Put your answer below -------------------------
 
+function duplicateArrays(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  } else {
+//
+    for(var i = 0; i < array1.length; i++) {
+      if (array1[i] !== array2[i])
+        return false;
+    }
+    return true;
 
+  }
+}
 
-
-
-
-
-
+duplicateArrays([1, 4, 3, 4], [0, 2, 3, 4])
 
 
 // -----------------------------------------------
@@ -136,7 +150,6 @@
 
 
 
-
 // -----------------------------------------------
 
 // ---------------------
@@ -147,9 +160,12 @@
 
 // Put your answer below -------------------------
 
-
-
-
+// function split(array, num1){
+//   var array1 = array.toString().slice(0, num1);
+//   console.log(array1);
+//
+// }
+// split(([1, 2, 3, 4], 2));
 
 
 
